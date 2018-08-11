@@ -2,7 +2,7 @@
  * 
 */
 import React, { Component } from "react";
-import { TweenLite, CSSPlugin } from "gsap/all";
+import { TimelineLite, CSSPlugin } from "gsap/all";
 
 class StateControl extends Component {
 

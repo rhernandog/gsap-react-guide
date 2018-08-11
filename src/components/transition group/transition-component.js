@@ -20,7 +20,7 @@ class FadeComponent extends Component {
 			}}
 		>
 			<div className="card col-6 transition-card">
-				some content
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, nemo recusandae. Enim, ex id? Architecto aliquid natus facere dolorum obcaecati eligendi commodi labore est eos.
 			</div>
 		</Transition>;
 	}
