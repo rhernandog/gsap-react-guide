@@ -1,0 +1,58 @@
+body,
+pre {
+	background-color: #333;
+	color: #fff;
+}
+
+hr {
+	border-color: #fff;
+}
+
+.gsap-btn {
+	background-color: #73b102;
+	color: #fff;
+}
+
+a:hover,
+.gsap-btn:hover,
+.gsap-btn:active,
+.gsap-btn:focus {
+	background-color: #88ce02;
+	color: #fff;
+}
+
+.logo {
+	width: 150px;
+}
+/*	GSAP & REACT GUIDE BASE
+******************************************/
+
+.knob {
+	width: 150px;
+}
+
+/* DRAGGABLE COMPONENT */
+.drag-track {
+	width: 80%;
+	width: 600px;
+	margin: 15px auto 0;
+	position: relative;
+	background-color: #fff;
+	border-radius: 2px;
+	height: 15px;
+}
+
+.drag-handle {
+	background-color: #e6e6e6;
+	position: absolute;
+	border-radius: 2px;
+	cursor: pointer;
+	left: 0;
+	top: -3px;
+	height: 21px;
+	width: 21px;
+}
+
+.drag-handle:hover {
+	background-color: #f2f2f2;
+}

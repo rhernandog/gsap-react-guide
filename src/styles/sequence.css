@@ -1,0 +1,60 @@
+body {
+  background-color:#000;
+}
+h1 {
+	position: relative;
+	margin-top: 10px;
+	font-size: 36px;
+	font-weight: normal;
+	color: #fff;
+}
+h2 {
+	position: relative;
+	font-size: 22px;
+	font-weight: normal;
+	color: #cfcfcf;
+}
+.demoWrapper {
+	width: 600px;
+	height: 350px;
+	-webkit-font-smoothing: antialiased;
+	color: black;
+	overflow: hidden;
+}
+.bg {
+	position: absolute;
+	background-image: url(https://www.greensock.com/_img/codepen/black_textured_background.png);
+	width: 600px;
+	height: 350px;
+}
+.content {
+	padding-left: 15px;
+	visibility: hidden;
+}
+.info {
+	margin-top: 20px;
+}
+.feature {
+	position: relative;
+	float: left;
+}
+.description {
+	position: relative;
+	float: left;
+	margin-left: 20px;
+	width: 290px;
+	font-size: 16px;
+	line-height: 24px;
+	color: #fff;
+}
+.nav {
+	position: relative;
+	clear: both;
+	white-space: nowrap;
+	left: 140px;
+}
+.nav img {
+	position: relative;
+	margin-right: 20px;
+	float: left;
+}

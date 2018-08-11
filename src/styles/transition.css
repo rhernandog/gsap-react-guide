@@ -1,0 +1,30 @@
+.card-container {
+	transform: translateY(25px);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.transition-card {
+	background-color: #73b102;
+	color: #fff;
+}
+
+.transition-card.simple {
+	transform: translateX(100px);
+	opacity: 0;
+	visibility: hidden;
+}
+
+.transition-card h4 {
+	margin: 10px 0;
+}
+
+button.close {
+	color: #fff;
+	opacity: 1;
+}
+
+button.close:hover,
+button.close:focus {
+	color: #003b03;
+}

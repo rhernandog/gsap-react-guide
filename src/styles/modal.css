@@ -1,0 +1,10 @@
+.modal {
+	background-color: rgba(30, 30, 30, 0.75);
+	display: block;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.modal-content {
+	color: #333;
+}

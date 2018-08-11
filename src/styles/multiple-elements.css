@@ -1,0 +1,8 @@
+.media-body {
+	color: #333;
+}
+
+.card-element {
+	opacity: 0;
+	visibility: hidden;
+}
