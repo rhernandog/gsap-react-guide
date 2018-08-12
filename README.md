@@ -64,7 +64,7 @@ Just create an [issue](https://github.com/rhernandog/gsap-forums-react/issues).
 Create a PR and test it thoroughly before submitting it. 
 
 ## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rhernandog/gsap-react-guide/blob/gsap-react-guide/LICENSE.md) file for details.
 
 ## Author
 - Rodrigo Hernando
