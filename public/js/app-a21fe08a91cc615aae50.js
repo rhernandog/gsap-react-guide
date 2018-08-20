@@ -173,6 +173,206 @@ exports.push([module.i, "body,\r\npre {\r\n\tbackground-color: #333;\r\n\tcolor:
 
 /***/ }),
 
+/***/ "./src/components/martin balle/route-styles.js":
+/*!*****************************************************!*\
+  !*** ./src/components/martin balle/route-styles.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+var _all = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var boxStyle = {
+	height: "100px",
+	width: "100px",
+	border: "1px solid",
+	lineHeight: "100px"
+};
+
+var MainContent = function (_Component) {
+	_inherits(MainContent, _Component);
+
+	function MainContent() {
+		_classCallCheck(this, MainContent);
+
+		var _this = _possibleConstructorReturn(this, (MainContent.__proto__ || Object.getPrototypeOf(MainContent)).call(this));
+
+		_this.locationChangeHandler = _this.locationChangeHandler.bind(_this);
+		return _this;
+	}
+
+	_createClass(MainContent, [{
+		key: "locationChangeHandler",
+		value: function locationChangeHandler() {
+			console.log(this.props.location.pathname);
+			switch (this.props.location.pathname) {
+				case "/about":
+					return "bg-success text-white";
+				case "/services":
+					return "bg-dark text-white";
+			}
+			return "bg-primary text-white";
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				"main",
+				{ className: "col-12" },
+				_react2.default.createElement(
+					"h5",
+					null,
+					"Style changes as the route changes"
+				)
+			);
+		}
+	}]);
+
+	return MainContent;
+}(_react.Component);
+
+var Menu = function (_Component2) {
+	_inherits(Menu, _Component2);
+
+	function Menu() {
+		_classCallCheck(this, Menu);
+
+		var _this2 = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this));
+
+		_this2.clickHandler = _this2.clickHandler.bind(_this2);
+		_this2.routeUpdater = _this2.routeUpdater.bind(_this2);
+		_this2.box = null;
+		_this2.tween = null;
+		_this2.state = {
+			route: "/"
+		};
+		return _this2;
+	}
+
+	_createClass(Menu, [{
+		key: "routeUpdater",
+		value: function routeUpdater() {
+			this.props.history.push(this.state.route);
+			this.tween.reverse();
+		}
+	}, {
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			this.tween = _all.TweenMax.to(this.box, 1, {
+				rotation: 360, paused: true,
+				onComplete: this.routeUpdater
+			});
+		}
+	}, {
+		key: "clickHandler",
+		value: function clickHandler(e) {
+			this.setState({ route: e.target.getAttribute("data-target") });
+			this.tween.restart();
+			// const route = e.target.getAttribute("data-target");
+			// setTimeout(() => this.props.history.push(route), 500);
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			var _this3 = this;
+
+			console.log(this.props.location);
+			return _react2.default.createElement(
+				"nav",
+				{ className: "col-12" },
+				_react2.default.createElement(
+					"div",
+					{ className: "btn-group" },
+					_react2.default.createElement(
+						"button",
+						{ onClick: this.clickHandler, "data-target": "/", className: "btn btn-primary", to: "/" },
+						"Home"
+					),
+					_react2.default.createElement(
+						"button",
+						{ onClick: this.clickHandler, "data-target": "/about", className: "btn btn-primary", to: "/about" },
+						"About"
+					),
+					_react2.default.createElement(
+						"button",
+						{ onClick: this.clickHandler, "data-target": "/services", className: "btn btn-primary", to: "/services" },
+						"Services"
+					)
+				),
+				_react2.default.createElement("hr", null),
+				_react2.default.createElement(
+					"div",
+					{ style: boxStyle, ref: function ref(e) {
+							return _this3.box = e;
+						} },
+					"alo"
+				)
+			);
+		}
+	}]);
+
+	return Menu;
+}(_react.Component);
+
+var RouteStyles = function (_Component3) {
+	_inherits(RouteStyles, _Component3);
+
+	function RouteStyles() {
+		_classCallCheck(this, RouteStyles);
+
+		return _possibleConstructorReturn(this, (RouteStyles.__proto__ || Object.getPrototypeOf(RouteStyles)).call(this));
+	}
+
+	_createClass(RouteStyles, [{
+		key: "render",
+		value: function render() {
+			return _react2.default.createElement(
+				_reactRouterDom.BrowserRouter,
+				null,
+				_react2.default.createElement(
+					"div",
+					{ className: "container mt-5" },
+					_react2.default.createElement(
+						"div",
+						{ className: "row" },
+						_react2.default.createElement(_reactRouterDom.Route, { path: "/", component: Menu }),
+						_react2.default.createElement(_reactRouterDom.Route, { path: "/", component: MainContent })
+					)
+				)
+			);
+		}
+	}]);
+
+	return RouteStyles;
+}(_react.Component);
+
+exports.default = RouteStyles;
+
+/***/ }),
+
 /***/ "./src/components/simple tween/simple-tween.js":
 /*!*****************************************************!*\
   !*** ./src/components/simple tween/simple-tween.js ***!
@@ -377,6 +577,10 @@ var _simpleTween = __webpack_require__(/*! ./components/simple tween/simple-twee
 
 var _simpleTween2 = _interopRequireDefault(_simpleTween);
 
+var _routeStyles = __webpack_require__(/*! ./components/martin balle/route-styles */ "./src/components/martin balle/route-styles.js");
+
+var _routeStyles2 = _interopRequireDefault(_routeStyles);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -405,7 +609,7 @@ var App = function (_Component) {
 			return _react2.default.createElement(
 				"div",
 				null,
-				_react2.default.createElement(_simpleTween2.default, null)
+				_react2.default.createElement(_routeStyles2.default, null)
 			);
 		}
 	}]);
@@ -448,4 +652,4 @@ if(false) {}
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app-3559a6273cc9530f6dd0.js.map
+//# sourceMappingURL=app-a21fe08a91cc615aae50.js.map
