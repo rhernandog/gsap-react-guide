@@ -13,15 +13,19 @@ const iconsArray = [
 ];
 
 class TimelineSequence extends Component {
+	
+	constructor(props){
+		super(props);
 
-	logoTl = new TimelineLite({ paused:true });
+		this.logoTl = new TimelineLite({ paused:true });
 
-	content = null;
-	head = null;
-	subhead = null;
-	feature = null;
-	description = null;
-	icons = [];
+		this.content = null;
+		this.head = null;
+		this.subhead = null;
+		this.feature = null;
+		this.description = null;
+		this.icons = [];
+	}
 
 	// add instances to the timeline
 	componentDidMount(){
@@ -47,19 +51,26 @@ class TimelineSequence extends Component {
 
 						<div className="bg"></div>
 
-						<div className="content" ref={ e => this.content = e }>
+						<div className="content" ref={ div => this.content = div }>
 
-							<h1 ref={ e => this.head = e }>Freakishly Robust</h1>
-							<h2 ref={ e => this.subhead = e }>With features that makes other engines look like cheap toys</h2>
+							<h1 ref={ h1 => this.head = h1 }>Freakishly Robust</h1>
+							<h2 ref={ h2 => this.subhead = h2 }>With features that makes other engines look like cheap toys</h2>
 							<div className="info">
-								<img src="https://www.greensock.com/_img/codepen/feature_robust.png" width="240" height="151" className="feature" ref={ e => this.feature = e } />
-								<p className="description" ref={ e => this.description = e }>Animate colors, beziers, css properties, arrays, scrolls and lots more. Round values, smoothly reverse() on the fly, use relative values, employ virtually any easing equation, and manage conflicting tweens like a pro. GSAP does all this and much more with ease.</p>
+								<img
+									src="https://www.greensock.com/_img/codepen/feature_robust.png"
+									width="240"
+									height="151"
+									className="feature"
+									ref={ img => this.feature = img }
+								/>
+								<p className="description" ref={ p => this.description = p }>Animate colors, beziers, css properties, arrays, scrolls and lots more. Round values, smoothly reverse() on the fly, use relative values, employ virtually any easing equation, and manage conflicting tweens like a pro. GSAP does all this and much more with ease.</p>
 							</div>
 
 							<div className="nav">
-								{ iconsArray.map( (e,i) => {
-									const { src, width, height } = e;
-									return <img key={`icon-${i}`}
+								{ iconsArray.map( (icon, index) => {
+									const { src, width, height } = icon;
+									return <img
+										key={`icon-${index}`}
 										src={src} width={width} height={height}
 										ref={ img => this.icons.push(img) }
 									/>;
@@ -72,16 +83,20 @@ class TimelineSequence extends Component {
 
 					{/* BUTTONS */}
 					<div className="my-3 btn-group">
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTl.play()}
 						>Play</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTl.pause()}
 						>Pause</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTl.reverse()}
 						>Reverse</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTl.restart()}
 						>Restart</button>
 					</div>

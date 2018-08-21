@@ -5,7 +5,9 @@ import { TweenLite, CSSPlugin } from "gsap/all";
 const startState = { autoAlpha: 0, y: -50 };
 
 export const Home = props => <Transition
-	unmountOnExit in={props.show} timeout={1000}
+	unmountOnExit
+	in={props.show}
+	timeout={1000}
 	onEnter={node => TweenLite.set(node, startState)}
 	addEndListener={ (node, done) => {
 		TweenLite.to(node, 0.5, {
@@ -27,7 +29,9 @@ export const Home = props => <Transition
 </Transition>;
 
 export const Services = props => <Transition
-	unmountOnExit in={props.show} timeout={1000}
+	unmountOnExit
+	in={props.show}
+	timeout={1000}
 	onEnter={ node => TweenLite.set(node, startState) }
 	addEndListener={ (node, done) => {
 		TweenLite.to(node, 0.5, {
@@ -49,7 +53,9 @@ export const Services = props => <Transition
 </Transition>;
 
 export const Contact = props => <Transition
-	unmountOnExit in={props.show} timeout={1000}
+	unmountOnExit
+	in={props.show}
+	timeout={1000}
 	onEnter={ node => TweenLite.set(node, startState) }
 	addEndListener={ (node, done) => {
 		TweenLite.to(node, 0.5, {

@@ -5,8 +5,8 @@ import "../../styles/transition.css";
 
 class SimpleTransition extends Component {
 
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state = {
 			show: false
 		};
@@ -29,7 +29,8 @@ class SimpleTransition extends Component {
 				</div>
 				<div className="col-12">
 					<div className="btn-group">
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={this.toggleComponent}
 						>Toggle Component</button>
 					</div>
@@ -53,7 +54,9 @@ class SimpleTransition extends Component {
 						<div className="card-body">
 							<h5 className="card-title">
 								Animating React with GSAP
-								<button type="button" className="close"
+								<button
+									type="button"
+									className="close"
 									onClick={() => this.setState({ show: false })}
 								>
 									<span aria-hidden="true">&times;</span>

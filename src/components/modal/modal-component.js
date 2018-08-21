@@ -8,9 +8,16 @@ import "../../styles/modal.css";
 
 class ModalComponent extends Component {
 
-	modalWrap = null;
-	modalDialog = null;
-	modalTween = new TimelineLite({ paused: true });
+	constructor(props){
+		super(props);
+
+		this.modalWrap = null;
+		this.modalDialog = null;
+		this.modalTween = new TimelineLite({ paused: true });
+
+		this.keyDownHandler = this.keyDownHandler.bind(this);
+	}
+
 
 	keyDownHandler = e => {
 		if ( e.keyCode == 27 ) this.props.close();
@@ -34,11 +41,14 @@ class ModalComponent extends Component {
 	}
 
 	render(){
-		return <div className="modal" ref={e => this.modalWrap = e}
+		return <div className="modal"
+			ref={div => this.modalWrap = div}
 			onClick={this.props.close}
 		>
-			<div className="modal-dialog" ref={e => this.modalDialog = e}
-				onClick={e => e.stopPropagation()}
+			<div
+				className="modal-dialog"
+				ref={div => this.modalDialog = div}
+				onClick={event => event.stopPropagation()}
 			>
 				<div className="modal-content">
 					<div className="modal-header">
