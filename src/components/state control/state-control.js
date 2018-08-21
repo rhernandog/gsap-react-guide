@@ -6,12 +6,21 @@ import { TimelineLite, CSSPlugin } from "gsap/all";
 
 class StateControl extends Component {
 
-	state = {
-		play: false,
-		pause: true,
-		reverse: false,
-		restart: false
-	};
+	constructor(props){
+		super(props);
+
+		this.state = {
+			play: false,
+			pause: true,
+			reverse: false,
+			restart: false
+		};
+
+		this.logoContainer = null;
+		this.logoTween = new TimelineLite({ paused: true });
+
+		this.buttonClickHandler = this.buttonClickHandler.bind(this);
+	}
 
 	/** The button click handler
 	 * Depending on the type of action, how the state will be updated
@@ -22,9 +31,6 @@ class StateControl extends Component {
 		newState[type] = true;
 		this.setState( newState );
 	}
-
-	logoContainer = null;
-	logoTween = new TimelineLite({ paused: true });
 
 	componentDidMount(){
 		// create logo tween
@@ -100,16 +106,20 @@ class StateControl extends Component {
 					<h3 className="text-center">Control Logo Tween</h3>
 					<p>Use the buttons to control the Logo Tween</p>
 					<div className="mb-2 btn-group">
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "play")}
 						>Play</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "pause")}
 						>Pause</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "reverse")}
 						>Reverse</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "restart")}
 						>Restart</button>
 					</div>
@@ -117,12 +127,19 @@ class StateControl extends Component {
 				
 				<div className="col-12 col-md-6">
 					<h4 className="text-center">App State</h4>
-					<pre className="p-2">{JSON.stringify(this.state, null, 2)}</pre>
+					<pre className="p-2">
+						{ JSON.stringify(this.state, null, 2) }
+					</pre>
 				</div>
 
 				<div className="col-12 mt-3">
 					<hr/>
-					<img src="img/logo.svg" alt="" className="img-fluid logo" ref={e => this.logoContainer = e} />
+					<img
+						src="img/logo.svg"
+						alt="GSAP Logo"
+						className="img-fluid logo"
+						ref={img => this.logoContainer = img}
+					/>
 				</div>
 
 			</div>

@@ -23,7 +23,8 @@ const TransitionCard = props => {
 				<div className="card-body">
 					<h4 className="card-title text-center">
 						{card.name}
-						<button type="button" className="close"
+						<button
+							type="button" className="close"
 							onClick={remove.bind(null, card.id)}
 						>
 							<span aria-hidden="true">&times;</span>
@@ -38,8 +39,8 @@ const TransitionCard = props => {
 
 class TransitionList extends Component {
 
-	constructor(){
-		super();
+	constructor(props){
+		super(props);
 		this.state = {
 			value: "",
 			cards: [],
@@ -97,8 +98,12 @@ class TransitionList extends Component {
 				<div className="col-12 col-md-6 mb-5">
 					<form onSubmit={this.addNewPerson}>
 						<div className="input-group">
-							<input type="text" id="personName" name="personName"
-								className="form-control" onChange={this.updateNameHandler}
+							<input
+								type="text"
+								id="personName"
+								name="personName"
+								className="form-control"
+								onChange={this.updateNameHandler}
 								value={this.state.value}
 							/>
 							<div className="input-group-append">
@@ -112,8 +117,13 @@ class TransitionList extends Component {
 
 			
 			<TransitionGroup className="row">
-				{this.state.cards.map((e, i) => 
-					<TransitionCard key={e.id} index={i} card={e} remove={this.removePerson} />
+				{this.state.cards.map((card, index) => 
+					<TransitionCard
+						key={card.id}
+						index={index}
+						card={card}
+						remove={this.removePerson}
+					/>
 				)}
 			</TransitionGroup>
 

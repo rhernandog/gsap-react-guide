@@ -10,10 +10,14 @@ import { TimelineLite, CSSPlugin } from "gsap/all";
 
 class SimpleTween extends Component {
 
-	// logo container
-	logoContainer = null;
-	// logo tween
-	logoTween = null;
+	constructor(props){
+		super(props);
+		// logo container
+		this.logoContainer = null;
+		// logo tween
+		this.logoTween = null;
+	}
+
 
 	componentDidMount(){
 		// create logo tween
@@ -38,16 +42,20 @@ class SimpleTween extends Component {
 					<h3 className="text-center">Control Logo Tween</h3>
 					<p>Use the buttons to control the Logo Tween</p>
 					<div className="mb-2 btn-group">
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTween.play()}
 						>Play</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTween.pause()}
 						>Pause</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTween.reverse()}
 						>Reverse</button>
-						<button className="btn gsap-btn"
+						<button
+							className="btn gsap-btn"
 							onClick={() => this.logoTween.restart()}
 						>Restart</button>
 					</div>
@@ -55,7 +63,12 @@ class SimpleTween extends Component {
 				</div>
 
 				<div className="col-12 mt-3">
-					<img src="img/logo.svg" alt="" className="img-fluid logo" ref={ e => this.logoContainer = e }/>
+					<img
+						src="img/logo.svg"
+						alt=""
+						className="img-fluid logo"
+						ref={ img => this.logoContainer = img }
+					/>
 				</div>
 
 			</div>

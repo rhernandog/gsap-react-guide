@@ -54,6 +54,13 @@ render(){
 ```
 
 ## Changelog
+
+#### Version 1.1.0
+- Fixes implicit returns in `ref` callbacks.
+- Adds `constructor` method to each sample and passes the `props` to the `super` call.
+- Fixes issues in JSX, moving attributes in long lines to an independent line each.
+- Changes sample code in the [multiple elements](https://github.com/rhernandog/gsap-react-guide/blob/master/src/components/simple%20tween/multiple-elements.js) sample, in order to remove side effects from the ref callback. Creates an array with the DOM elements and then uses that array in `componentDidMount` to create the timeline.
+
 #### Version 1.0.0
 - Stable initial commit.
 

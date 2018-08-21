@@ -8,8 +8,14 @@ import ModalComponent from "./modal-component";
 
 class GSAPModal extends Component {
 
-	state = {
-		modalVisible: false
+	constructor(props){
+		super(props);
+		
+		this.state = {
+			modalVisible: false
+		};
+
+		this.setModalVisible = this.setModalVisible.bind(this);
 	}
 
 	setModalVisible = v => this.setState({ modalVisible: v });
@@ -29,7 +35,10 @@ class GSAPModal extends Component {
 					</div>
 
 					<div className="col-12">
-						<button className="btn gsap-btn" onClick={this.setModalVisible.bind(null, true)}>
+						<button
+							className="btn gsap-btn"
+							onClick={this.setModalVisible.bind(null, true)}
+						>
 							Show Modal
 						</button>
 						<hr/>
@@ -37,19 +46,26 @@ class GSAPModal extends Component {
 
 					<div className="col-12 col-md-6">
 						<h4>Main Component State</h4>
-						<pre className="p-2">{JSON.stringify(this.state, null, 2)}</pre>
+						<pre className="p-2">
+							{ JSON.stringify(this.state, null, 2) }
+						</pre>
 					</div>
 					<div className="col-12 col-md-6">
 						<h4>Modal Component Props</h4>
-						<pre className="p-2">{JSON.stringify({
-							visible: this.state.modalVisible
-						}, null, 2)}</pre>
+						<pre className="p-2">
+							{JSON.stringify({
+								visible: this.state.modalVisible
+							}, null, 2)}
+						</pre>
 					</div>
 
 				</div>
 			</div>
 
-			<ModalComponent visible={this.state.modalVisible} close={this.setModalVisible.bind(null, false)} />
+			<ModalComponent
+				visible={this.state.modalVisible}
+				close={this.setModalVisible.bind(null, false)}
+			/>
 
 		</div>;
 	}

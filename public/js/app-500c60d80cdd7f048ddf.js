@@ -173,10 +173,216 @@ exports.push([module.i, "body,\r\npre {\r\n\tbackground-color: #333;\r\n\tcolor:
 
 /***/ }),
 
-/***/ "./src/components/martin balle/route-styles.js":
-/*!*****************************************************!*\
-  !*** ./src/components/martin balle/route-styles.js ***!
-  \*****************************************************/
+/***/ "./src/components/router/components.js":
+/*!*********************************************!*\
+  !*** ./src/components/router/components.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.Contact = exports.Services = exports.Home = undefined;
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactTransitionGroup = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/index.js");
+
+var _all = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var startState = { autoAlpha: 0, y: -50 };
+
+var Home = exports.Home = function Home(props) {
+	return _react2.default.createElement(
+		_reactTransitionGroup.Transition,
+		{
+			unmountOnExit: true,
+			"in": props.show,
+			timeout: 1000,
+			onEnter: function onEnter(node) {
+				return _all.TweenLite.set(node, startState);
+			},
+			addEndListener: function addEndListener(node, done) {
+				_all.TweenLite.to(node, 0.5, {
+					autoAlpha: props.show ? 1 : 0,
+					y: props.show ? 0 : 50,
+					onComplete: done
+				});
+			}
+		},
+		_react2.default.createElement(
+			"div",
+			{ className: "position-absolute col-12" },
+			_react2.default.createElement(
+				"div",
+				{ className: "col-12 mt-5" },
+				_react2.default.createElement(
+					"div",
+					{ className: "alert alert-success" },
+					_react2.default.createElement(
+						"h2",
+						{ className: "text-center mb-0" },
+						"HOME"
+					)
+				),
+				_react2.default.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis exercitationem provident vitae cum inventore voluptatem, numquam laborum minima quisquam excepturi odit similique repellendus beatae vero autem, natus ab deleniti expedita?"
+				),
+				_react2.default.createElement(
+					"p",
+					null,
+					"Porro eveniet dolores consectetur, sapiente quas cupiditate natus, nemo iusto modi hic accusantium necessitatibus cumque nostrum expedita quisquam corrupti alias nobis praesentium impedit non quos! Id deserunt explicabo iure nulla."
+				)
+			)
+		)
+	);
+};
+
+var Services = exports.Services = function Services(props) {
+	return _react2.default.createElement(
+		_reactTransitionGroup.Transition,
+		{
+			unmountOnExit: true,
+			"in": props.show,
+			timeout: 1000,
+			onEnter: function onEnter(node) {
+				return _all.TweenLite.set(node, startState);
+			},
+			addEndListener: function addEndListener(node, done) {
+				_all.TweenLite.to(node, 0.5, {
+					autoAlpha: props.show ? 1 : 0,
+					y: props.show ? 0 : 50,
+					onComplete: done
+				});
+			}
+		},
+		_react2.default.createElement(
+			"div",
+			{ className: "position-absolute col-12" },
+			_react2.default.createElement(
+				"div",
+				{ className: "col-12 mt-5" },
+				_react2.default.createElement(
+					"div",
+					{ className: "alert alert-success" },
+					_react2.default.createElement(
+						"h2",
+						{ className: "text-center mb-0" },
+						"SERVICES"
+					)
+				),
+				_react2.default.createElement(
+					"p",
+					null,
+					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, suscipit consequuntur repellendus qui harum, cumque facilis quisquam, consectetur saepe doloremque ducimus? Suscipit repudiandae aut fuga."
+				),
+				_react2.default.createElement(
+					"p",
+					null,
+					"Explicabo ut ea, hic delectus iste error illo tempora molestiae facilis amet officia, repudiandae impedit praesentium labore enim doloremque optio quae sunt odit possimus repellendus."
+				)
+			)
+		)
+	);
+};
+
+var Contact = exports.Contact = function Contact(props) {
+	return _react2.default.createElement(
+		_reactTransitionGroup.Transition,
+		{
+			unmountOnExit: true,
+			"in": props.show,
+			timeout: 1000,
+			onEnter: function onEnter(node) {
+				return _all.TweenLite.set(node, startState);
+			},
+			addEndListener: function addEndListener(node, done) {
+				_all.TweenLite.to(node, 0.5, {
+					autoAlpha: props.show ? 1 : 0,
+					y: props.show ? 0 : 50,
+					onComplete: done
+				});
+			}
+		},
+		_react2.default.createElement(
+			"div",
+			{ className: "position-absolute col-12" },
+			_react2.default.createElement(
+				"div",
+				{ className: "col-12 mt-5" },
+				_react2.default.createElement(
+					"div",
+					{ className: "alert alert-success" },
+					_react2.default.createElement(
+						"h3",
+						{ className: "text-center mb-0" },
+						"CONTACT"
+					)
+				),
+				_react2.default.createElement(
+					"div",
+					{ className: "row justify-content-center" },
+					_react2.default.createElement(
+						"div",
+						{ className: "col-12 col-md-6" },
+						_react2.default.createElement(
+							"div",
+							{ className: "form-group" },
+							_react2.default.createElement(
+								"label",
+								{ htmlFor: "name" },
+								"Name"
+							),
+							_react2.default.createElement("input", { type: "text", name: "name", id: "name", className: "form-control" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "form-group" },
+							_react2.default.createElement(
+								"label",
+								{ htmlFor: "mail" },
+								"Email"
+							),
+							_react2.default.createElement("input", { type: "email", name: "mail", id: "mail", className: "form-control" })
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "form-group" },
+							_react2.default.createElement(
+								"label",
+								{ htmlFor: "comments" },
+								"Comments"
+							),
+							_react2.default.createElement("textarea", { name: "comments", id: "comments", rows: "5", className: "form-control" })
+						),
+						_react2.default.createElement(
+							"button",
+							{ className: "btn gsap-btn" },
+							"Submit"
+						)
+					)
+				)
+			)
+		)
+	);
+};
+
+/***/ }),
+
+/***/ "./src/components/router/routes.js":
+/*!*****************************************!*\
+  !*** ./src/components/router/routes.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -195,7 +401,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 
-var _all = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
+var _components = __webpack_require__(/*! ./components */ "./src/components/router/components.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -204,179 +410,120 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+// components
 
-var boxStyle = {
-	height: "100px",
-	width: "100px",
-	border: "1px solid",
-	lineHeight: "100px"
-};
 
-var MainContent = function (_Component) {
-	_inherits(MainContent, _Component);
+var paths = ["/", "/services", "/contact"];
 
-	function MainContent() {
-		_classCallCheck(this, MainContent);
+var Routes = function (_Component) {
+	_inherits(Routes, _Component);
 
-		var _this = _possibleConstructorReturn(this, (MainContent.__proto__ || Object.getPrototypeOf(MainContent)).call(this));
+	function Routes() {
+		_classCallCheck(this, Routes);
 
-		_this.locationChangeHandler = _this.locationChangeHandler.bind(_this);
-		return _this;
+		return _possibleConstructorReturn(this, (Routes.__proto__ || Object.getPrototypeOf(Routes)).apply(this, arguments));
 	}
 
-	_createClass(MainContent, [{
-		key: "locationChangeHandler",
-		value: function locationChangeHandler() {
-			console.log(this.props.location.pathname);
-			switch (this.props.location.pathname) {
-				case "/about":
-					return "bg-success text-white";
-				case "/services":
-					return "bg-dark text-white";
-			}
-			return "bg-primary text-white";
-		}
-	}, {
+	_createClass(Routes, [{
 		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				"main",
-				{ className: "col-12" },
-				_react2.default.createElement(
-					"h5",
-					null,
-					"Style changes as the route changes"
-				)
-			);
-		}
-	}]);
-
-	return MainContent;
-}(_react.Component);
-
-var Menu = function (_Component2) {
-	_inherits(Menu, _Component2);
-
-	function Menu() {
-		_classCallCheck(this, Menu);
-
-		var _this2 = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this));
-
-		_this2.clickHandler = _this2.clickHandler.bind(_this2);
-		_this2.routeUpdater = _this2.routeUpdater.bind(_this2);
-		_this2.box = null;
-		_this2.tween = null;
-		_this2.state = {
-			route: "/"
-		};
-		return _this2;
-	}
-
-	_createClass(Menu, [{
-		key: "routeUpdater",
-		value: function routeUpdater() {
-			this.props.history.push(this.state.route);
-			this.tween.reverse();
-		}
-	}, {
-		key: "componentDidMount",
-		value: function componentDidMount() {
-			this.tween = _all.TweenMax.to(this.box, 1, {
-				rotation: 360, paused: true,
-				onComplete: this.routeUpdater
-			});
-		}
-	}, {
-		key: "clickHandler",
-		value: function clickHandler(e) {
-			this.setState({ route: e.target.getAttribute("data-target") });
-			this.tween.restart();
-			// const route = e.target.getAttribute("data-target");
-			// setTimeout(() => this.props.history.push(route), 500);
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			var _this3 = this;
-
-			console.log(this.props.location);
-			return _react2.default.createElement(
-				"nav",
-				{ className: "col-12" },
+				"div",
+				{ className: "container" },
 				_react2.default.createElement(
 					"div",
-					{ className: "btn-group" },
+					{ className: "row" },
 					_react2.default.createElement(
-						"button",
-						{ onClick: this.clickHandler, "data-target": "/", className: "btn btn-primary", to: "/" },
-						"Home"
-					),
-					_react2.default.createElement(
-						"button",
-						{ onClick: this.clickHandler, "data-target": "/about", className: "btn btn-primary", to: "/about" },
-						"About"
-					),
-					_react2.default.createElement(
-						"button",
-						{ onClick: this.clickHandler, "data-target": "/services", className: "btn btn-primary", to: "/services" },
-						"Services"
+						"div",
+						{ className: "col-12" },
+						_react2.default.createElement(
+							"h3",
+							{ className: "text-center" },
+							"Animating Routes With GSAP"
+						),
+						_react2.default.createElement("p", { className: "lead" })
 					)
 				),
-				_react2.default.createElement("hr", null),
 				_react2.default.createElement(
-					"div",
-					{ style: boxStyle, ref: function ref(e) {
-							return _this3.box = e;
-						} },
-					"alo"
-				)
-			);
-		}
-	}]);
-
-	return Menu;
-}(_react.Component);
-
-var RouteStyles = function (_Component3) {
-	_inherits(RouteStyles, _Component3);
-
-	function RouteStyles() {
-		_classCallCheck(this, RouteStyles);
-
-		return _possibleConstructorReturn(this, (RouteStyles.__proto__ || Object.getPrototypeOf(RouteStyles)).call(this));
-	}
-
-	_createClass(RouteStyles, [{
-		key: "render",
-		value: function render() {
-			return _react2.default.createElement(
-				_reactRouterDom.BrowserRouter,
-				null,
-				_react2.default.createElement(
-					"div",
-					{ className: "container mt-5" },
+					_reactRouterDom.BrowserRouter,
+					null,
 					_react2.default.createElement(
 						"div",
 						{ className: "row" },
-						_react2.default.createElement(_reactRouterDom.Route, { path: "/", component: Menu }),
-						_react2.default.createElement(_reactRouterDom.Route, { path: "/", component: MainContent })
+						_react2.default.createElement(
+							"nav",
+							{ className: "col-12" },
+							_react2.default.createElement(
+								_reactRouterDom.Link,
+								{ className: "btn gsap-btn mr-2", to: "/" },
+								"Home"
+							),
+							_react2.default.createElement(
+								_reactRouterDom.Link,
+								{ className: "btn gsap-btn mr-2", to: "/services" },
+								"Services"
+							),
+							_react2.default.createElement(
+								_reactRouterDom.Link,
+								{ className: "btn gsap-btn", to: "/contact" },
+								"Contact"
+							)
+						),
+						_react2.default.createElement(
+							"div",
+							{ className: "col-12" },
+							_react2.default.createElement(
+								_reactRouterDom.Route,
+								{ path: "/", exact: true },
+								function (_ref) {
+									var match = _ref.match;
+									return _react2.default.createElement(_components.Home, { show: match !== null });
+								}
+							),
+							_react2.default.createElement(
+								_reactRouterDom.Route,
+								{ path: "/services" },
+								function (_ref2) {
+									var match = _ref2.match;
+									return _react2.default.createElement(_components.Services, { show: match !== null });
+								}
+							),
+							_react2.default.createElement(
+								_reactRouterDom.Route,
+								{ path: "/contact" },
+								function (_ref3) {
+									var match = _ref3.match;
+									return _react2.default.createElement(_components.Contact, { show: match !== null });
+								}
+							),
+							_react2.default.createElement(_reactRouterDom.Route, { path: "/", render: function render(_ref4) {
+									var location = _ref4.location;
+
+									if (paths.indexOf(location.pathname) < 0) {
+										// this is 404
+										return _react2.default.createElement(_reactRouterDom.Redirect, { to: "/" });
+									} else {
+										return "";
+									}
+								} })
+						)
 					)
 				)
 			);
 		}
 	}]);
 
-	return RouteStyles;
+	return Routes;
 }(_react.Component);
 
-exports.default = RouteStyles;
+exports.default = Routes;
 
 /***/ }),
 
-/***/ "./src/components/simple tween/simple-tween.js":
-/*!*****************************************************!*\
-  !*** ./src/components/simple tween/simple-tween.js ***!
-  \*****************************************************/
+/***/ "./src/helpers/transition-group-cards.js":
+/*!***********************************************!*\
+  !*** ./src/helpers/transition-group-cards.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -386,170 +533,23 @@ exports.default = RouteStyles;
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _all = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * SIMPLE TWEEN SAMPLE
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * This sample creates a simple animation and controls for that animation.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Reviews the methods to get the DOM element and pass it to the GSAP
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * instance. 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
-
-var SimpleTween = function (_Component) {
-	_inherits(SimpleTween, _Component);
-
-	function SimpleTween() {
-		var _ref;
-
-		var _temp, _this, _ret;
-
-		_classCallCheck(this, SimpleTween);
-
-		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-			args[_key] = arguments[_key];
-		}
-
-		return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SimpleTween.__proto__ || Object.getPrototypeOf(SimpleTween)).call.apply(_ref, [this].concat(args))), _this), _this.logoContainer = null, _this.logoTween = null, _temp), _possibleConstructorReturn(_this, _ret);
-	}
-
-	// logo container
-
-	// logo tween
-
-
-	_createClass(SimpleTween, [{
-		key: "componentDidMount",
-		value: function componentDidMount() {
-			// create logo tween
-			this.logoTween = new _all.TimelineLite({ paused: true }).to(this.logoContainer, 2, { x: 500 }).to(this.logoContainer, 1, { rotation: 360, transformOrigin: "center" });
-		}
-	}, {
-		key: "render",
-		value: function render() {
-			var _this2 = this;
-
-			return _react2.default.createElement(
-				"div",
-				{ className: "container" },
-				_react2.default.createElement(
-					"div",
-					{ className: "row" },
-					_react2.default.createElement(
-						"div",
-						{ className: "col-12 mt-3" },
-						_react2.default.createElement(
-							"h3",
-							{ className: "text-center" },
-							"Simple Tween"
-						),
-						_react2.default.createElement(
-							"p",
-							null,
-							"Animates the GSAP logo to the right of it's original position and finally does a 360 degrees rotation. You can use the buttons to control the animation."
-						),
-						_react2.default.createElement(
-							"p",
-							null,
-							"Uses the ",
-							_react2.default.createElement(
-								"strong",
-								null,
-								"ref"
-							),
-							" inline callback to create a reference to the DOM element, which is then used in the ",
-							_react2.default.createElement(
-								"strong",
-								null,
-								"componentDidMount"
-							),
-							" event to create the GSAP instance."
-						),
-						_react2.default.createElement("hr", null)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "col-12" },
-						_react2.default.createElement(
-							"h3",
-							{ className: "text-center" },
-							"Control Logo Tween"
-						),
-						_react2.default.createElement(
-							"p",
-							null,
-							"Use the buttons to control the Logo Tween"
-						),
-						_react2.default.createElement(
-							"div",
-							{ className: "mb-2 btn-group" },
-							_react2.default.createElement(
-								"button",
-								{ className: "btn gsap-btn",
-									onClick: function onClick() {
-										return _this2.logoTween.play();
-									}
-								},
-								"Play"
-							),
-							_react2.default.createElement(
-								"button",
-								{ className: "btn gsap-btn",
-									onClick: function onClick() {
-										return _this2.logoTween.pause();
-									}
-								},
-								"Pause"
-							),
-							_react2.default.createElement(
-								"button",
-								{ className: "btn gsap-btn",
-									onClick: function onClick() {
-										return _this2.logoTween.reverse();
-									}
-								},
-								"Reverse"
-							),
-							_react2.default.createElement(
-								"button",
-								{ className: "btn gsap-btn",
-									onClick: function onClick() {
-										return _this2.logoTween.restart();
-									}
-								},
-								"Restart"
-							)
-						),
-						_react2.default.createElement("hr", null)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "col-12 mt-3" },
-						_react2.default.createElement("img", { src: "img/logo.svg", alt: "", className: "img-fluid logo", ref: function ref(e) {
-								return _this2.logoContainer = e;
-							} })
-					)
-				)
-			);
-		}
-	}]);
-
-	return SimpleTween;
-}(_react.Component);
-
-exports.default = SimpleTween;
+var cards = exports.cards = [{
+	"id": "1729d38abee60593c8c5d2d2cb95f546",
+	"name": "Tamy",
+	"init": true
+}, {
+	"id": "6bd5d6329026a15bf607118cdc95671b",
+	"name": "Derek",
+	"init": true
+}, {
+	"id": "2df108538776b71a95fc5303d6104f46",
+	"name": "Emmit",
+	"init": true
+}, {
+	"id": "fa106f03ec0d8b04f7e2d20b02b276ef",
+	"name": "Lilly",
+	"init": true
+}];
 
 /***/ }),
 
@@ -573,13 +573,11 @@ var _reactDom = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/i
 
 __webpack_require__(/*! ./styles/base.css */ "./src/styles/base.css");
 
-var _simpleTween = __webpack_require__(/*! ./components/simple tween/simple-tween */ "./src/components/simple tween/simple-tween.js");
+var _transitionGroupCards = __webpack_require__(/*! ./helpers/transition-group-cards */ "./src/helpers/transition-group-cards.js");
 
-var _simpleTween2 = _interopRequireDefault(_simpleTween);
+var _routes = __webpack_require__(/*! ./components/router/routes */ "./src/components/router/routes.js");
 
-var _routeStyles = __webpack_require__(/*! ./components/martin balle/route-styles */ "./src/components/martin balle/route-styles.js");
-
-var _routeStyles2 = _interopRequireDefault(_routeStyles);
+var _routes2 = _interopRequireDefault(_routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -609,7 +607,7 @@ var App = function (_Component) {
 			return _react2.default.createElement(
 				"div",
 				null,
-				_react2.default.createElement(_routeStyles2.default, null)
+				_react2.default.createElement(_routes2.default, null)
 			);
 		}
 	}]);
@@ -652,4 +650,4 @@ if(false) {}
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app-a21fe08a91cc615aae50.js.map
+//# sourceMappingURL=app-500c60d80cdd7f048ddf.js.map
