@@ -173,216 +173,10 @@ exports.push([module.i, "body,\r\npre {\r\n\tbackground-color: #333;\r\n\tcolor:
 
 /***/ }),
 
-/***/ "./src/components/router/components.js":
-/*!*********************************************!*\
-  !*** ./src/components/router/components.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.Contact = exports.Services = exports.Home = undefined;
-
-var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactTransitionGroup = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/index.js");
-
-var _all = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var startState = { autoAlpha: 0, y: -50 };
-
-var Home = exports.Home = function Home(props) {
-	return _react2.default.createElement(
-		_reactTransitionGroup.Transition,
-		{
-			unmountOnExit: true,
-			"in": props.show,
-			timeout: 1000,
-			onEnter: function onEnter(node) {
-				return _all.TweenLite.set(node, startState);
-			},
-			addEndListener: function addEndListener(node, done) {
-				_all.TweenLite.to(node, 0.5, {
-					autoAlpha: props.show ? 1 : 0,
-					y: props.show ? 0 : 50,
-					onComplete: done
-				});
-			}
-		},
-		_react2.default.createElement(
-			"div",
-			{ className: "position-absolute col-12" },
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 mt-5" },
-				_react2.default.createElement(
-					"div",
-					{ className: "alert alert-success" },
-					_react2.default.createElement(
-						"h2",
-						{ className: "text-center mb-0" },
-						"HOME"
-					)
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis exercitationem provident vitae cum inventore voluptatem, numquam laborum minima quisquam excepturi odit similique repellendus beatae vero autem, natus ab deleniti expedita?"
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"Porro eveniet dolores consectetur, sapiente quas cupiditate natus, nemo iusto modi hic accusantium necessitatibus cumque nostrum expedita quisquam corrupti alias nobis praesentium impedit non quos! Id deserunt explicabo iure nulla."
-				)
-			)
-		)
-	);
-};
-
-var Services = exports.Services = function Services(props) {
-	return _react2.default.createElement(
-		_reactTransitionGroup.Transition,
-		{
-			unmountOnExit: true,
-			"in": props.show,
-			timeout: 1000,
-			onEnter: function onEnter(node) {
-				return _all.TweenLite.set(node, startState);
-			},
-			addEndListener: function addEndListener(node, done) {
-				_all.TweenLite.to(node, 0.5, {
-					autoAlpha: props.show ? 1 : 0,
-					y: props.show ? 0 : 50,
-					onComplete: done
-				});
-			}
-		},
-		_react2.default.createElement(
-			"div",
-			{ className: "position-absolute col-12" },
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 mt-5" },
-				_react2.default.createElement(
-					"div",
-					{ className: "alert alert-success" },
-					_react2.default.createElement(
-						"h2",
-						{ className: "text-center mb-0" },
-						"SERVICES"
-					)
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, suscipit consequuntur repellendus qui harum, cumque facilis quisquam, consectetur saepe doloremque ducimus? Suscipit repudiandae aut fuga."
-				),
-				_react2.default.createElement(
-					"p",
-					null,
-					"Explicabo ut ea, hic delectus iste error illo tempora molestiae facilis amet officia, repudiandae impedit praesentium labore enim doloremque optio quae sunt odit possimus repellendus."
-				)
-			)
-		)
-	);
-};
-
-var Contact = exports.Contact = function Contact(props) {
-	return _react2.default.createElement(
-		_reactTransitionGroup.Transition,
-		{
-			unmountOnExit: true,
-			"in": props.show,
-			timeout: 1000,
-			onEnter: function onEnter(node) {
-				return _all.TweenLite.set(node, startState);
-			},
-			addEndListener: function addEndListener(node, done) {
-				_all.TweenLite.to(node, 0.5, {
-					autoAlpha: props.show ? 1 : 0,
-					y: props.show ? 0 : 50,
-					onComplete: done
-				});
-			}
-		},
-		_react2.default.createElement(
-			"div",
-			{ className: "position-absolute col-12" },
-			_react2.default.createElement(
-				"div",
-				{ className: "col-12 mt-5" },
-				_react2.default.createElement(
-					"div",
-					{ className: "alert alert-success" },
-					_react2.default.createElement(
-						"h3",
-						{ className: "text-center mb-0" },
-						"CONTACT"
-					)
-				),
-				_react2.default.createElement(
-					"div",
-					{ className: "row justify-content-center" },
-					_react2.default.createElement(
-						"div",
-						{ className: "col-12 col-md-6" },
-						_react2.default.createElement(
-							"div",
-							{ className: "form-group" },
-							_react2.default.createElement(
-								"label",
-								{ htmlFor: "name" },
-								"Name"
-							),
-							_react2.default.createElement("input", { type: "text", name: "name", id: "name", className: "form-control" })
-						),
-						_react2.default.createElement(
-							"div",
-							{ className: "form-group" },
-							_react2.default.createElement(
-								"label",
-								{ htmlFor: "mail" },
-								"Email"
-							),
-							_react2.default.createElement("input", { type: "email", name: "mail", id: "mail", className: "form-control" })
-						),
-						_react2.default.createElement(
-							"div",
-							{ className: "form-group" },
-							_react2.default.createElement(
-								"label",
-								{ htmlFor: "comments" },
-								"Comments"
-							),
-							_react2.default.createElement("textarea", { name: "comments", id: "comments", rows: "5", className: "form-control" })
-						),
-						_react2.default.createElement(
-							"button",
-							{ className: "btn gsap-btn" },
-							"Submit"
-						)
-					)
-				)
-			)
-		)
-	);
-};
-
-/***/ }),
-
-/***/ "./src/components/router/routes.js":
-/*!*****************************************!*\
-  !*** ./src/components/router/routes.js ***!
-  \*****************************************/
+/***/ "./src/components/simple tween/simple-tween.js":
+/*!*****************************************************!*\
+  !*** ./src/components/simple tween/simple-tween.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -399,9 +193,7 @@ var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
-
-var _components = __webpack_require__(/*! ./components */ "./src/components/router/components.js");
+var _all = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -409,24 +201,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-// components
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * SIMPLE TWEEN SAMPLE
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * This sample creates a simple animation and controls for that animation.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Reviews the methods to get the DOM element and pass it to the GSAP
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * instance. 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+
+// import { TimelineLite, CSSPlugin } from "gsap/all";
 
 
-var paths = ["/", "/services", "/contact"];
+var SimpleTween = function (_Component) {
+	_inherits(SimpleTween, _Component);
 
-var Routes = function (_Component) {
-	_inherits(Routes, _Component);
+	function SimpleTween(props) {
+		_classCallCheck(this, SimpleTween);
 
-	function Routes() {
-		_classCallCheck(this, Routes);
+		// logo container
+		var _this = _possibleConstructorReturn(this, (SimpleTween.__proto__ || Object.getPrototypeOf(SimpleTween)).call(this, props));
 
-		return _possibleConstructorReturn(this, (Routes.__proto__ || Object.getPrototypeOf(Routes)).apply(this, arguments));
+		_this.logoContainer = null;
+		// logo tween
+		_this.logoTween = null;
+		return _this;
 	}
 
-	_createClass(Routes, [{
+	_createClass(SimpleTween, [{
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			// create logo tween
+			this.logoTween = new TimelineLite({ paused: true }).to(this.logoContainer, 2, { x: 500 }).to(this.logoContainer, 1, { rotation: 360, transformOrigin: "center" });
+		}
+	}, {
 		key: "render",
 		value: function render() {
+			var _this2 = this;
+
 			return _react2.default.createElement(
 				"div",
 				{ className: "container" },
@@ -435,88 +245,116 @@ var Routes = function (_Component) {
 					{ className: "row" },
 					_react2.default.createElement(
 						"div",
+						{ className: "col-12 mt-3" },
+						_react2.default.createElement(
+							"h3",
+							{ className: "text-center" },
+							"Simple Tween"
+						),
+						_react2.default.createElement(
+							"p",
+							null,
+							"Animates the GSAP logo to the right of it's original position and finally does a 360 degrees rotation. You can use the buttons to control the animation."
+						),
+						_react2.default.createElement(
+							"p",
+							null,
+							"Uses the ",
+							_react2.default.createElement(
+								"strong",
+								null,
+								"ref"
+							),
+							" inline callback to create a reference to the DOM element, which is then used in the ",
+							_react2.default.createElement(
+								"strong",
+								null,
+								"componentDidMount"
+							),
+							" event to create the GSAP instance."
+						),
+						_react2.default.createElement("hr", null)
+					),
+					_react2.default.createElement(
+						"div",
 						{ className: "col-12" },
 						_react2.default.createElement(
 							"h3",
 							{ className: "text-center" },
-							"Animating Routes With GSAP"
+							"Control Logo Tween"
 						),
-						_react2.default.createElement("p", { className: "lead" })
-					)
-				),
-				_react2.default.createElement(
-					_reactRouterDom.BrowserRouter,
-					null,
-					_react2.default.createElement(
-						"div",
-						{ className: "row" },
 						_react2.default.createElement(
-							"nav",
-							{ className: "col-12" },
-							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ className: "btn gsap-btn mr-2", to: "/" },
-								"Home"
-							),
-							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ className: "btn gsap-btn mr-2", to: "/services" },
-								"Services"
-							),
-							_react2.default.createElement(
-								_reactRouterDom.Link,
-								{ className: "btn gsap-btn", to: "/contact" },
-								"Contact"
-							)
+							"p",
+							null,
+							"Use the buttons to control the Logo Tween"
 						),
 						_react2.default.createElement(
 							"div",
-							{ className: "col-12" },
+							{ className: "mb-2 btn-group" },
 							_react2.default.createElement(
-								_reactRouterDom.Route,
-								{ path: "/", exact: true },
-								function (_ref) {
-									var match = _ref.match;
-									return _react2.default.createElement(_components.Home, { show: match !== null });
-								}
-							),
-							_react2.default.createElement(
-								_reactRouterDom.Route,
-								{ path: "/services" },
-								function (_ref2) {
-									var match = _ref2.match;
-									return _react2.default.createElement(_components.Services, { show: match !== null });
-								}
-							),
-							_react2.default.createElement(
-								_reactRouterDom.Route,
-								{ path: "/contact" },
-								function (_ref3) {
-									var match = _ref3.match;
-									return _react2.default.createElement(_components.Contact, { show: match !== null });
-								}
-							),
-							_react2.default.createElement(_reactRouterDom.Route, { path: "/", render: function render(_ref4) {
-									var location = _ref4.location;
-
-									if (paths.indexOf(location.pathname) < 0) {
-										// this is 404
-										return _react2.default.createElement(_reactRouterDom.Redirect, { to: "/" });
-									} else {
-										return "";
+								"button",
+								{
+									className: "btn gsap-btn",
+									onClick: function onClick() {
+										return _this2.logoTween.play();
 									}
-								} })
-						)
+								},
+								"Play"
+							),
+							_react2.default.createElement(
+								"button",
+								{
+									className: "btn gsap-btn",
+									onClick: function onClick() {
+										return _this2.logoTween.pause();
+									}
+								},
+								"Pause"
+							),
+							_react2.default.createElement(
+								"button",
+								{
+									className: "btn gsap-btn",
+									onClick: function onClick() {
+										return _this2.logoTween.reverse();
+									}
+								},
+								"Reverse"
+							),
+							_react2.default.createElement(
+								"button",
+								{
+									className: "btn gsap-btn",
+									onClick: function onClick() {
+										return _this2.logoTween.restart();
+									}
+								},
+								"Restart"
+							)
+						),
+						_react2.default.createElement("hr", null)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "col-12 mt-3" },
+						_react2.default.createElement("img", {
+							src: "img/logo.svg",
+							alt: "",
+							className: "img-fluid logo",
+							ref: function ref(img) {
+								return _this2.logoContainer = img;
+							}
+						})
 					)
 				)
 			);
 		}
 	}]);
 
-	return Routes;
+	return SimpleTween;
 }(_react.Component);
 
-exports.default = Routes;
+exports.default = SimpleTween;
 
 /***/ }),
 
@@ -575,9 +413,9 @@ __webpack_require__(/*! ./styles/base.css */ "./src/styles/base.css");
 
 var _transitionGroupCards = __webpack_require__(/*! ./helpers/transition-group-cards */ "./src/helpers/transition-group-cards.js");
 
-var _routes = __webpack_require__(/*! ./components/router/routes */ "./src/components/router/routes.js");
+var _simpleTween = __webpack_require__(/*! ./components/simple tween/simple-tween */ "./src/components/simple tween/simple-tween.js");
 
-var _routes2 = _interopRequireDefault(_routes);
+var _simpleTween2 = _interopRequireDefault(_simpleTween);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -607,7 +445,7 @@ var App = function (_Component) {
 			return _react2.default.createElement(
 				"div",
 				null,
-				_react2.default.createElement(_routes2.default, null)
+				_react2.default.createElement(_simpleTween2.default, null)
 			);
 		}
 	}]);
@@ -650,4 +488,4 @@ if(false) {}
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app-500c60d80cdd7f048ddf.js.map
+//# sourceMappingURL=app-8b1591094fff42954daf.js.map
