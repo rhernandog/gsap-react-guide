@@ -55,6 +55,9 @@ render(){
 
 ## Changelog
 
+#### Version 1.2.1
+- Properly formatted FAQ's markdown.
+
 #### Version 1.2.0
 - Fixed route in readme file.
 - Added acknowledgments in the article and readme files.
