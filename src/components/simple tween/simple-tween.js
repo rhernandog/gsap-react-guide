@@ -6,7 +6,8 @@
 */
 
 import React, { Component } from "react";
-import { TimelineLite, CSSPlugin } from "gsap/all";
+// import { TimelineLite, CSSPlugin } from "gsap/all";
+import { TweenMax } from "gsap/all";
 
 class SimpleTween extends Component {
 
