@@ -247,21 +247,36 @@ As you can see by now, using GSAP in a React app is quite simple and it shouldn'
 
 ## FAQ
 1. What is this "*Virtual DOM*" thing, that is referred so much when it comes to React Apps?. Can GSAP work with this virtual dom?.
-A. The **Virtual DOM** is a way that React has to update the DOM in a fast and efficient way, in order to learn more about it check [this article](https://medium.freecodecamp.org/a-quick-guide-to-learn-react-and-how-its-virtual-dom-works-c869d788cd44) and the [React Docs](https://reactjs.org/docs/faq-internals.html). GSAP can't work with the virtual DOM because the elements in the Virtual DOM are not exactly DOM nodes per-se.
+
+   **A.** The **Virtual DOM** is a way that React has to update the DOM in a fast and efficient way, in order to learn more about it check [this article](https://medium.freecodecamp.org/a-quick-guide-to-learn-react-and-how-its-virtual-dom-works-c869d788cd44) and the [React Docs](https://reactjs.org/docs/faq-internals.html). GSAP can't work with the virtual DOM because the elements in the Virtual DOM are not exactly DOM nodes per-se.
+
 2. I often read about the *declarative nature of React*. Does that affect how we use GSAP in a React APP?.
-A. Yes. React works by updating the rendered DOM through changes in the App state, so when creating an animation using GSAP, instead of reaching out directly to the DOM, like in most other cases, we need to wait for those changes in the app state and the DOM to be rendered, in order to use the current representation of the app state and create the animation. To learn more about how declarative and imperative code work read [this article](https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2).
+   
+   **A.** Yes. React works by updating the rendered DOM through changes in the App state, so when creating an animation using GSAP, instead of reaching out directly to the DOM, like in most other cases, we need to wait for those changes in the app state and the DOM to be rendered, in order to use the current representation of the app state and create the animation. To learn more about how declarative and imperative code work read [this article](https://codeburst.io/declarative-vs-imperative-programming-a8a7c93d9ad2).
+
 3. In the second sample I see this code in the ref callback `ref={div => this.cards[i] = div}`. Why is the index being used instead of just pushing the element in the array?.
-A. The reason for that is quite simple. Everytime a React component is re-rendered, the `render` method is executed, but the original instance remains unchanged. The array used to create the animation is created in the component's constructor. The GSAP instance (a TimelineLite) is created in the `componentDidMount` hook. These two elements are created just once in the App's lifecycle, while the render method is executed on every re-render. Therefore if we push the elements to the array on every re-render, even though the Timeline instance won't change, the array will get bigger and bigger every time the component is re-rendered, whic could cause a memory issue, especially for large collections.
+
+   **A.** The reason for that is quite simple. Everytime a React component is re-rendered, the `render` method is executed, but the original instance remains unchanged. The array used to create the animation is created in the component's constructor. The GSAP instance (a TimelineLite) is created in the `componentDidMount` hook. These two elements are created just once in the App's lifecycle, while the render method is executed on every re-render. Therefore if we push the elements to the array on every re-render, even though the Timeline instance won't change, the array will get bigger and bigger every time the component is re-rendered, whic could cause a memory issue, especially for large collections.
+
 4. In the guide one of the samples triggers animations via the state of a component or the app. Is it possible to update the state of the component/app using GSAP.
-A. Of course!! and is really easy too, all you have to do is use one of the many callback events GSAP has to offer. The only precaution is to be aware of infinite loops. That is if an animation is started on the render method of a component and a callback from that animation updates the state of the component. That will trigger a re-render, which will start the animation again. You can check this [simple example](https://stackblitz.com/edit/gsap-update-state) of how that can be done.
+
+   **A.** Of course!! and is really easy too, all you have to do is use one of the many callback events GSAP has to offer. The only precaution is to be aware of infinite loops. That is if an animation is started on the render method of a component and a callback from that animation updates the state of the component. That will trigger a re-render, which will start the animation again. You can check this [simple example](https://stackblitz.com/edit/gsap-update-state) of how that can be done.
+
 5. Is it possible to trigger a route change using GSAP?.
-A. It is possible using React Router's API. Although is not very recommendable because using React Router's API direclty will prevent triggering the route change animations when using the browser's *back* and *forward* buttons, while using React Transition Group with GSAP does trigger the route change animations with the native navigation methods.
+
+   **A.** It is possible using React Router's API. Although is not very recommendable because using React Router's API direclty will prevent triggering the route change animations when using the browser's *back* and *forward* buttons, while using React Transition Group with GSAP does trigger the route change animations with the native navigation methods.
+
 6. Can I use other GSAP plugins and tools in a React App?. This guide shows only TweenMax, Timeline and the CSS Plugin.
-A. Of course, any GSAP tool or Plugin you want can be used in a React app, just be sure to follow the same patterns and guidelines from this article and you'll be fine.
+
+   **A.** Of course, any GSAP tool or Plugin you want can be used in a React app, just be sure to follow the same patterns and guidelines from this article and you'll be fine.
+
 7. I tried the code in the guide and samples, but it doesn't work.
-A. Head to the GreenSock Forums, where all your questions will be answered as fast as possible and the comunity will help you.
+   
+   **A.** Head to the GreenSock Forums, where all your questions will be answered as fast as possible and the comunity will help you.
+
 8. Contributing and Issues in this guide. Can I post something in the GreenSock Forums?.
-A. Even though this guide was reviewed by GSAP and React experts, perhaps something might have slipped away, or with time and new software versions, some things should or could be done differently. The GreenSock Forums are not the best place for that, since they purpose is to answer GSAP-related questions. For those cases please head to this [GitHub Repo](https://github.com/rhernandog/gsap-react-guide) and inform any issues or create a Pull Request with the changes you think should be added.
+
+   **A.** Even though this guide was reviewed by GSAP and React experts, perhaps something might have slipped away, or with time and new software versions, some things should or could be done differently. The GreenSock Forums are not the best place for that, since they purpose is to answer GSAP-related questions. For those cases please head to this [GitHub Repo](https://github.com/rhernandog/gsap-react-guide) and inform any issues or create a Pull Request with the changes you think should be added.
 
 ## Acknowledgments
 First of all I'd like to thank Jack Doyle and Carl Schooff, for trusting me with such an important task as this article.
