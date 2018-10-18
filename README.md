@@ -43,7 +43,7 @@ The transition list component, obviously works with a dynamic list of elements t
 
 ```js
 import TransitionList from "./components/transition-list";
-import { cards } from "../helpers/transition-group-cards";
+import { cards } from "./helpers/transition-group-cards";
 
 // then in the render method of the main app
 render(){
@@ -55,8 +55,17 @@ render(){
 
 ## Changelog
 
-#### Version 1.1.1
-- Synced content from the article.md file and the live content on GreenSock's blog.
+#### Version 1.2.2
+- Synced article content betweent the article.md file and the article in GreenSock's blog.
+
+#### Version 1.2.1
+- Properly formatted FAQ's markdown.
+
+#### Version 1.2.0
+- Fixed route in readme file.
+- Added acknowledgments in the article and readme files.
+- Created FAQ file.
+- Added sample to control state using GSAP.
 
 #### Version 1.1.0
 - Fixes implicit returns in `ref` callbacks.
@@ -82,4 +91,10 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 - Codepen [rhernando](https://codepen.io/rhernando/)
 
 ## Acknowledgments
-First I'd like to thanks Jack Doyle (creator of GreenSock) and [Carl Schooff](https://twitter.com/snorklTV) (GreenSock's one and only Geek Ambassador) for trusting me such an important task.
+First I'd like to thank Jack Doyle (creator of GreenSock) and [Carl Schooff](https://twitter.com/snorklTV) (GreenSock's one and only Geek Ambassador) for trusting me such an important task.
+
+Also I'd like to thank the following developers:
+
+- Xiaoyan Wang (Horizon Blue). A very talented React developer, while Xiaoyan doesn't have a very active *social* life (twitter, facebook, etc), you can follow what He does in [GitHub](https://github.com/horizon-blue).
+- Jason Quense. One of the maintainers of React Transition Group and part of React Bootstrap. Also collaborates in many other React-related projects. Check Jason's [GitHub profile](https://github.com/jquense) for more info.
+- Last but not least, Matija Marohnić. The most active contributor and maintainer of React Transition Group and Part of the Yeoman Team. Matija also contributes in a lot of React-related projects as well as many other open source software. Be sure to follow Matija in [GitHub](https://github.com/silvenon) and [Twitter](https://twitter.com/silvenon).
