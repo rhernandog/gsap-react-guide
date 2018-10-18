@@ -55,6 +55,9 @@ render(){
 
 ## Changelog
 
+#### Version 1.2.2
+- Synced article content betweent the article.md file and the article in GreenSock's blog.
+
 #### Version 1.2.1
 - Properly formatted FAQ's markdown.
 
