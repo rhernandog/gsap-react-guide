@@ -55,6 +55,9 @@ render(){
 
 ## Changelog
 
+#### Version 1.1.1
+- Synced content from the article.md file and the live content on GreenSock's blog.
+
 #### Version 1.1.0
 - Fixes implicit returns in `ref` callbacks.
 - Adds `constructor` method to each sample and passes the `props` to the `super` call.

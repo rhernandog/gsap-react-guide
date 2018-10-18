@@ -47,13 +47,10 @@ class MultipleElements extends Component {
 		this.cards = [];
 		// the timeline instance
 		this.tl = new TimelineLite({ paused: true });
-		this.cardsTween;
 	}
 
 	componentDidMount(){
-		this.cards.forEach( (card, index) => {
-			this.tl.to( card , 0.5, { autoAlpha: 1, y: -20 }, 0.1 * index);
-		});
+		this.tl.staggerTo(this.cards , 0.5, { autoAlpha: 1, y: -20 }, 0.1);
 	}
 
 	render(){
