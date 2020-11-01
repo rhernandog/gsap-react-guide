@@ -23,8 +23,8 @@ class SimpleTransition extends Component {
 		return <div className="container">
 			<div className="row">
 				<div className="col-12">
-					<h3 className="text-center">Transition Group & GSAP Sample</h3>
-					<p className="lead">This sample uses Transition to mount and unmount a component. After mounting the component is <strong>animated in</strong> by GSAP. Then the component is <strong>animated out</strong> and when the animation is complete, is unmounted.</p>
+					<h3 className="text-center">Группа перехода и образец GSAP</h3>
+					<p className="lead">В этом примере для монтирования и размонтирования компонента используется переход. После установки компонент <strong>анимируется</strong> с помощью GSAP. Затем компонент <strong>анимируется</strong>, а когда анимация завершается, отключается.</p>
 					<hr/>
 				</div>
 				<div className="col-12">
@@ -32,7 +32,7 @@ class SimpleTransition extends Component {
 						<button
 							className="btn gsap-btn"
 							onClick={this.toggleComponent}
-						>Toggle Component</button>
+						>Переключить компонент</button>
 					</div>
 					<hr/>
 				</div>
@@ -53,7 +53,7 @@ class SimpleTransition extends Component {
 					<div className="card col-6 transition-card simple">
 						<div className="card-body">
 							<h5 className="card-title">
-								Animating React with GSAP
+							Анимация React с помощью GSAP
 								<button
 									type="button"
 									className="close"
@@ -62,7 +62,7 @@ class SimpleTransition extends Component {
 									<span aria-hidden="true">&times;</span>
 								</button>
 							</h5>
-							<p className="card-text">This entire element is mounted before the in animation starts and unmounted after the out animation is complete!!</p>
+							<p className="card-text">Весь этот элемент монтируется до начала анимации входа и отключается после завершения анимации выхода!!</p>
 						</div>
 					</div>
 				</Transition>

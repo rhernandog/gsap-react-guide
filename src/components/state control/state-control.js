@@ -97,36 +97,36 @@ class StateControl extends Component {
 				
 				<div className="col-12 mt-3">
 					<h3 className="text-center">State Controlled Tween</h3>
-					<p>Animates the GSAP logo to the right of it's original position and finally does a 360 degrees rotation. You can use the buttons to control the animation.</p>
-					<p>In this particular sample the animation is controlled based on the component's state changes. The app reads the state updates and plays, pauses, reverses or restarts the logo animation.</p>
+					<p>Оживляет логотип GSAP справа от его исходного положения и, наконец, делает 360 градусов вращения. Вы можете использовать кнопки для управления анимацией.</p>
+					<p>В этом конкретном примере анимация управляется на основе изменений состояния компонента. Приложение считывает обновления состояния и воспроизводит, приостанавливает, отменяет или перезапускает анимацию логотипа.</p>
 					<hr />
 				</div>
 
 				<div className="col-12 col-md-6">
-					<h3 className="text-center">Control Logo Tween</h3>
-					<p>Use the buttons to control the Logo Tween</p>
+					<h3 className="text-center">Управление логотипом Tween</h3>
+					<p>Используйте кнопки для управления Logo Tween</p>
 					<div className="mb-2 btn-group">
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "play")}
-						>Play</button>
+						>Играть</button>
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "pause")}
-						>Pause</button>
+						>Пауза</button>
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "reverse")}
-						>Reverse</button>
+						>Реверс</button>
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "restart")}
-						>Restart</button>
+						>Рестарт</button>
 					</div>
 				</div>
 				
 				<div className="col-12 col-md-6">
-					<h4 className="text-center">App State</h4>
+					<h4 className="text-center">Состояние приложения</h4>
 					<pre className="p-2">
 						{ JSON.stringify(this.state, null, 2) }
 					</pre>

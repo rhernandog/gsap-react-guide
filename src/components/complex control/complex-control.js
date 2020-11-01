@@ -53,35 +53,35 @@ class ComplexControl extends Component {
 	render(){
 		return <div className="row">
 			<div className="col-12 mt-3">
-				<h3 className="text-center">Simple Tween - Complex Control</h3>
-				<p>Animates the GSAP logo to the right of it's original position.</p>
-				<p>Creates a Draggable instance (rotation) for the knob element.</p>
-				<p>You can control the the logo animation using the knob on the right side of the screen. Also the progress of the logo tween, will affect the knob rotation and the knob Draggable instance.</p>
+				<h3 className="text-center">Простой Tween - Комплексный контроль</h3>
+				<p>Оживляет логотип GSAP справа от его исходного положения.</p>
+				<p>Создает экземпляр Draggable (вращение) для элемента ручки.</p>
+				<p>Управлять анимацией логотипа можно с помощью ручки на правой стороне экрана. Также прогресс tween логоса, повлияет на вращение ручки и экземпляр Draggable ручки.</p>
 				<hr />
 			</div>
 			{/* buttons */}
 			<div className="col-12 col-md-6">
-				<h3 className="text-center">Control Logo Tween</h3>
-				<p>Use the buttons to control the Logo Tween</p>
+				<h3 className="text-center">Контроль логотипа Tween</h3>
+				<p>Используйте кнопки для управления логотипом Tween</p>
 				<div className="mb-2 btn-group">
 					<button className="btn gsap-btn"
 						onClick={() => this.logoTween.play()}
-					>Play</button>
+					>Играть</button>
 					<button className="btn gsap-btn"
 						onClick={() => this.logoTween.pause()}
-					>Pause</button>
+					>Пауза</button>
 					<button className="btn gsap-btn"
 						onClick={() => this.logoTween.reverse()}
-					>Reverse</button>
+					>Реверс</button>
 					<button className="btn gsap-btn"
 						onClick={() => this.logoTween.restart()}
-					>Restart</button>
+					>Перезапуск</button>
 				</div>
 			</div>
 			{/* draggable knob */}
 			<div className="col-12 col-md-6">
-				<h3 className="text-center">Draggable Knob</h3>
-				<p>Rotate the knob to control the Logo Tween</p>
+				<h3 className="text-center">Выдвижная Ручка</h3>
+				<p>Поверните ручку, чтобы управлять анимацией логотипа</p>
 				<div className="text-center">
 					<img src="img/knob.png" alt="" className="img-fluid knob"
 						ref={e => this.draggableKnob = e}

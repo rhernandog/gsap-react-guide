@@ -43,8 +43,8 @@ class TimelineSequence extends Component {
 			<div className="row">
 				<div className="col-12 mt-3">
 
-					<h3 className="text-center">Timeline Sequence</h3>
-					<p className="lead">Uses the <strong>ref</strong> callback to create references for a group of elements in the app. Then using the <strong>componentDidMount</strong> method, creates a timeline sequence that can be controlled using the buttons.</p>
+					<h3 className="text-center">Последовательность временной шкалы</h3>
+					<p className="lead">Использует обратный вызов <strong> ref </strong> для создания ссылок для группы элементов в приложении. Затем с помощью метода <strong> componentDidMount </strong> создает последовательность временной шкалы, которой можно управлять с помощью кнопок.</p>
 					
 					{/* DEMO WRAPPER */}
 					<div className="demoWrapper">
@@ -53,8 +53,8 @@ class TimelineSequence extends Component {
 
 						<div className="content" ref={ div => this.content = div }>
 
-							<h1 ref={ h1 => this.head = h1 }>Freakishly Robust</h1>
-							<h2 ref={ h2 => this.subhead = h2 }>With features that makes other engines look like cheap toys</h2>
+							<h1 ref={ h1 => this.head = h1 }>Причудливо прочный</h1>
+							<h2 ref={ h2 => this.subhead = h2 }>С функциями, которые делают другие двигатели похожими на дешевые игрушки</h2>
 							<div className="info">
 								<img
 									src="https://www.greensock.com/_img/codepen/feature_robust.png"
@@ -63,7 +63,7 @@ class TimelineSequence extends Component {
 									className="feature"
 									ref={ img => this.feature = img }
 								/>
-								<p className="description" ref={ p => this.description = p }>Animate colors, beziers, css properties, arrays, scrolls and lots more. Round values, smoothly reverse() on the fly, use relative values, employ virtually any easing equation, and manage conflicting tweens like a pro. GSAP does all this and much more with ease.</p>
+								<p className="description" ref={ p => this.description = p }>Анимируйте цвета, кривые Безье, свойства CSS, массивы, прокрутки и многое другое. Круглые значения, плавное обратное () на лету, используют относительные значения, используют практически любое уравнение плавности и управляют конфликтующими подростками как профессионал. GSAP делает все это и многое другое с легкостью.</p>
 							</div>
 
 							<div className="nav">

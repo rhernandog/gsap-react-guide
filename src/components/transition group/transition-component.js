@@ -20,7 +20,7 @@ class FadeComponent extends Component {
 			}}
 		>
 			<div className="card col-6 transition-card">
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore, nemo recusandae. Enim, ex id? Architecto aliquid natus facere dolorum obcaecati eligendi commodi labore est eos.
+			К работе никто не принял. Например, из чего? Ослепленный преимуществом выбора тяжелой работы горестей, Архитектор из них, что-то родилось.
 			</div>
 		</Transition>;
 	}
