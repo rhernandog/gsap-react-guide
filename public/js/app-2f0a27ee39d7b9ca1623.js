@@ -10,7 +10,7 @@
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
 /******/ 		for(;i < chunkIds.length; i++) {
 /******/ 			chunkId = chunkIds[i];
-/******/ 			if(installedChunks[chunkId]) {
+/******/ 			if(Object.prototype.hasOwnProperty.call(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 				resolves.push(installedChunks[chunkId][0]);
 /******/ 			}
 /******/ 			installedChunks[chunkId] = 0;
@@ -46,6 +46,7 @@
 /******/ 				result = __webpack_require__(__webpack_require__.s = deferredModule[0]);
 /******/ 			}
 /******/ 		}
+/******/
 /******/ 		return result;
 /******/ 	}
 /******/
@@ -154,21 +155,20 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/css-loader/index.js!./src/styles/base.css":
-/*!*******************************************************!*\
-  !*** ./node_modules/css-loader!./src/styles/base.css ***!
-  \*******************************************************/
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/base.css":
+/*!*******************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/base.css ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
-// imports
-
-
-// module
-exports.push([module.i, "body,\r\npre {\r\n\tbackground-color: #333;\r\n\tcolor: #fff;\r\n}\r\n\r\nhr {\r\n\tborder-color: #fff;\r\n}\r\n\r\n.gsap-btn {\r\n\tbackground-color: #73b102;\r\n\tcolor: #fff;\r\n}\r\n\r\na:hover,\r\n.gsap-btn:hover,\r\n.gsap-btn:active,\r\n.gsap-btn:focus {\r\n\tbackground-color: #88ce02;\r\n\tcolor: #fff;\r\n}\r\n\r\n.logo {\r\n\twidth: 150px;\r\n}\r\n/*\tGSAP & REACT GUIDE BASE\r\n******************************************/\r\n\r\n.knob {\r\n\twidth: 150px;\r\n}\r\n\r\n/* DRAGGABLE COMPONENT */\r\n.drag-track {\r\n\twidth: 80%;\r\n\twidth: 600px;\r\n\tmargin: 15px auto 0;\r\n\tposition: relative;\r\n\tbackground-color: #fff;\r\n\tborder-radius: 2px;\r\n\theight: 15px;\r\n}\r\n\r\n.drag-handle {\r\n\tbackground-color: #e6e6e6;\r\n\tposition: absolute;\r\n\tborder-radius: 2px;\r\n\tcursor: pointer;\r\n\tleft: 0;\r\n\ttop: -3px;\r\n\theight: 21px;\r\n\twidth: 21px;\r\n}\r\n\r\n.drag-handle:hover {\r\n\tbackground-color: #f2f2f2;\r\n}\r\n", ""]);
-
-// exports
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+exports = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+exports.push([module.i, "body,\npre {\n\tbackground-color: #333;\n\tcolor: #fff;\n}\n\nhr {\n\tborder-color: #fff;\n}\n\n.gsap-btn {\n\tbackground-color: #73b102;\n\tcolor: #fff;\n}\n\na:hover,\n.gsap-btn:hover,\n.gsap-btn:active,\n.gsap-btn:focus {\n\tbackground-color: #88ce02;\n\tcolor: #fff;\n}\n\n.logo {\n\twidth: 150px;\n}\n/*\tGSAP & REACT GUIDE BASE\n******************************************/\n\n.knob {\n\twidth: 150px;\n}\n\n/* DRAGGABLE COMPONENT */\n.drag-track {\n\twidth: 80%;\n\twidth: 600px;\n\tmargin: 15px auto 0;\n\tposition: relative;\n\tbackground-color: #fff;\n\tborder-radius: 2px;\n\theight: 15px;\n}\n\n.drag-handle {\n\tbackground-color: #e6e6e6;\n\tposition: absolute;\n\tborder-radius: 2px;\n\tcursor: pointer;\n\tleft: 0;\n\ttop: -3px;\n\theight: 21px;\n\twidth: 21px;\n}\n\n.drag-handle:hover {\n\tbackground-color: #f2f2f2;\n}\n", ""]);
+// Exports
+module.exports = exports;
 
 
 /***/ }),
@@ -203,10 +203,9 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /** 
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 * SIMPLE TWEEN SAMPLE
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * This sample creates a simple animation and controls for that animation.
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Reviews the methods to get the DOM element and pass it to the GSAP
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * instance. 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * В этом примере создается простая анимация и элементы управления для этой анимации.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Проверяет методы получения элемента DOM и передачи его экземпляру GSAP 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               **/
 
 // import { TimelineLite, CSSPlugin } from "gsap/all";
 
@@ -249,29 +248,29 @@ var SimpleTween = function (_Component) {
 						_react2.default.createElement(
 							"h3",
 							{ className: "text-center" },
-							"Simple Tween"
+							"\u041F\u0440\u043E\u0441\u0442\u0430\u044F \u0410\u043D\u0438\u043C\u0430\u0446\u0438\u044F"
 						),
 						_react2.default.createElement(
 							"p",
 							null,
-							"Animates the GSAP logo to the right of it's original position and finally does a 360 degrees rotation. You can use the buttons to control the animation."
+							"\u0410\u043D\u0438\u043C\u0438\u0440\u0443\u0435\u0442 \u043B\u043E\u0433\u043E\u0442\u0438\u043F GSAP \u0441\u043F\u0440\u0430\u0432\u0430 \u043E\u0442 \u0435\u0433\u043E \u0438\u0441\u0445\u043E\u0434\u043D\u043E\u0433\u043E \u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0438\u044F \u0438, \u043D\u0430\u043A\u043E\u043D\u0435\u0446, \u0434\u0435\u043B\u0430\u0435\u0442 \u043F\u043E\u0432\u043E\u0440\u043E\u0442 \u043D\u0430 360 \u0433\u0440\u0430\u0434\u0443\u0441\u043E\u0432. \u0412\u044B \u043C\u043E\u0436\u0435\u0442\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u043A\u043D\u043E\u043F\u043A\u0438 \u0434\u043B\u044F \u0443\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u044F \u0430\u043D\u0438\u043C\u0430\u0446\u0438\u0435\u0439."
 						),
 						_react2.default.createElement(
 							"p",
 							null,
-							"Uses the ",
+							"\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442 \u0432\u0441\u0442\u0440\u043E\u0435\u043D\u043D\u044B\u0439 \u043E\u0431\u0440\u0430\u0442\u043D\u044B\u0439 \u0432\u044B\u0437\u043E\u0432 ",
 							_react2.default.createElement(
 								"strong",
 								null,
 								"ref"
 							),
-							" inline callback to create a reference to the DOM element, which is then used in the ",
+							" \u0434\u043B\u044F \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u0441\u0441\u044B\u043B\u043A\u0438 \u043D\u0430 \u044D\u043B\u0435\u043C\u0435\u043D\u0442 DOM, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0437\u0430\u0442\u0435\u043C \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u0432 \u0441\u043E\u0431\u044B\u0442\u0438\u0438 ",
 							_react2.default.createElement(
 								"strong",
 								null,
 								"componentDidMount"
 							),
-							" event to create the GSAP instance."
+							" \u0434\u043B\u044F \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u044D\u043A\u0437\u0435\u043C\u043F\u043B\u044F\u0440\u0430 GSAP."
 						),
 						_react2.default.createElement("hr", null)
 					),
@@ -281,7 +280,7 @@ var SimpleTween = function (_Component) {
 						_react2.default.createElement(
 							"h3",
 							{ className: "text-center" },
-							"Control Logo Tween"
+							"\u0423\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u043B\u043E\u0433\u043E\u0442\u0438\u043F\u043E\u043C Tween"
 						),
 						_react2.default.createElement(
 							"p",
@@ -465,7 +464,7 @@ var App = function (_Component) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../node_modules/css-loader!./base.css */ "./node_modules/css-loader/index.js!./src/styles/base.css");
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js!./base.css */ "./node_modules/css-loader/dist/cjs.js!./src/styles/base.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -488,4 +487,4 @@ if(false) {}
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app-8b1591094fff42954daf.js.map
+//# sourceMappingURL=app-2f0a27ee39d7b9ca1623.js.map
