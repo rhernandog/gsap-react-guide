@@ -63,35 +63,35 @@ class UpdateState extends Component {
 			<div className="row">
 				
 				<div className="col-12">
-					<h3 className="text-center">Control State Via GSAP Callbacks</h3>
-					<p>Uses GSAP <i>onComplete</i> and <i>onReverseComplete</i> callbacks to update the component's state.</p>
+					<h3 className="text-center">Состояние управления с помощью обратных вызовов GSAP</h3>
+					<p>Использует обратные вызовы GSAP <i>onComplete</i> и <i>onReverseComplete</i> для обновления состояния компонента.</p>
 				</div>
 
 				<div className="col-12 col-md-6">
-					<h3 className="text-center">Control Logo Tween</h3>
-					<p>Use the buttons to control the Logo Tween</p>
+					<h3 className="text-center">Управление логотипом Tween</h3>
+					<p>Используйте кнопки для управления Logo Tween</p>
 					<div className="mb-2 btn-group">
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "play")}
-						>Play</button>
+						>Играть</button>
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "pause")}
-						>Pause</button>
+						>Пауза</button>
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "reverse")}
-						>Reverse</button>
+						>Реверс</button>
 						<button
 							className="btn gsap-btn"
 							onClick={this.buttonClickHandler.bind(null, "restart")}
-						>Restart</button>
+						>Рестарт</button>
 					</div>
 				</div>
 
 				<div className="col-12 col-md-6">
-					<h4 className="text-center">App State</h4>
+					<h4 className="text-center">Состояние приложения</h4>
 					<pre className="p-2">
 						{JSON.stringify(this.state, null, 2)}
 					</pre>

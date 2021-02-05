@@ -20,7 +20,7 @@ class ModalComponent extends Component {
 
 
 	keyDownHandler = e => {
-		if ( e.keyCode == 27 ) this.props.close();
+		if ( e.keyCode === 27 ) this.props.close();
 	}
 
 	componentDidMount() {
@@ -55,13 +55,13 @@ class ModalComponent extends Component {
 						<h4>A Simple Modal Tween</h4>
 					</div>
 					<div className="modal-body">
-						<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam velit provident sunt iusto ratione dolore veritatis deserunt ullam vel doloribus.</p>
+						<p>Целый хочет обеспечить регулярный характер истины, чтобы отказаться от любой боли или страдания.</p>
 					</div>
 					<div className="modal-footer">
 						<button className="btn btn-secondary"
 							onClick={this.props.close}
 						>
-							Close
+							Закрыть
 						</button>
 					</div>
 				</div>

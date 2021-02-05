@@ -89,9 +89,9 @@ class TransitionList extends Component {
 			<div className="row">
 
 				<div className="col-12">
-					<h3 className="text-center">Transition of a List of Items</h3>
-					<p className="lead">Just like the previous sample, this animates the mount/unmount of a collection of components or elements wrapped in a <strong>&lt;Transition&gt;</strong> tag.</p>
-					<p className="lead">Unlike the previous sample, in this we don't pass the <strong>in</strong> property to the component. The <strong>&lt;TransitionGroup&gt;</strong> component handles and passes the in boolean to each <strong>&lt;Transition&gt;</strong> element. Then in every transition child, we can access the <strong>in</strong> boolean on it's props.</p>
+					<h3 className="text-center">Переход списка элементов</h3>
+					<p className="lead">Как и в предыдущем примере, это анимирует монтирование/размонтирование набора компонентов или элементов, завернутых в тег <strong>&lt;Transition&gt;</strong>.</p>
+					<p className="lead">В отличие от предыдущего примера, в этом мы не передаем компоненту свойство <strong> in </strong>. The <strong>&lt;TransitionGroup&gt;</strong> компонент обрабатывает и передает логическое значение каждому <strong>&lt;Transition&gt;</strong> элементу. Затем в каждом дочернем переходе мы можем получить доступ к логическому значению <strong> in </strong> на его реквизитах.</p>
 					<hr/>
 				</div>
 				{/* form */}
@@ -107,7 +107,7 @@ class TransitionList extends Component {
 								value={this.state.value}
 							/>
 							<div className="input-group-append">
-								<button className="btn gsap-btn" type="submit">Add Person</button>
+								<button className="btn gsap-btn" type="submit">Добавить человека</button>
 							</div>
 						</div>
 					</form>

@@ -1,17 +1,17 @@
 /** 
  * MULTIPLE ELEMENTS SAMPLE
- * This sample creates an animation with a group of elements.
- * Using a data array, we create elements and add them to an array
- * in the component through the ref callback. This array is used in
- * the GSAP instance.
+ * Этот пример создает анимацию с группой элементов.
+ * Используя массив данных, мы создаем элементы и добавляем их в массив 
+ * в компоненте через обратный вызов ref. Этот массив используется в экземпляре 
+ * GSAP.
 */
 
 import React, { Component } from "react";
 import { TimelineLite, CSSPlugin, TweenMax } from "gsap/all";
-// styles
+// стили
 import "../../styles/multiple-elements.css";
 
-// the data array
+// массив данных
 const dataArray = [
 	{
 		"id": "0837a8f79f4657150c482f9400daea0b",
@@ -43,9 +43,9 @@ class MultipleElements extends Component {
 
 	constructor(props){
 		super(props);
-		// cards, elements tha will be used in the tween
+		// карты, элементы, которые будут использоваться в твине
 		this.cards = [];
-		// the timeline instance
+		// экземпляр временной шкалы
 		this.tl = new TimelineLite({ paused: true });
 	}
 
@@ -59,30 +59,30 @@ class MultipleElements extends Component {
 			<div className="row mt-3">
 				
 				<div className="col-12">
-					<h3 className="text-center">Multiple Elements Animation</h3>
-					<p>This sample uses an array of data to create a group of cards. For each card we add a instance to a single timeline, which can be controlled with the buttons present below.</p>
-					<p>In this sample we use the ref inline callback to create a <i>from</i> instance in the timeline and the index value from the map array helper, to create the stagger effect.</p>
+					<h3 className="text-center">Анимация Нескольких Элементов</h3>
+					<p>В этом примере массив данных используется для создания группы карточек. Для каждой карты мы добавляем экземпляр в единую временную шкалу, которой можно управлять с помощью кнопок, представленных ниже.</p>
+					<p>В этом примере мы используем встроенный обратный вызов ref для создания экземпляра <i>from</i> на временной шкале и значение индекса из помощника map array для создания эффекта stagger.</p>
 					<hr/>
 					{/* buttons */}
-					<h3 className="text-center">Control Timeline</h3>
-					<p>Use the buttons to control the cards Timeline</p>
+					<h3 className="text-center">Контрольная Шкала Времени</h3>
+					<p>Используйте кнопки для управления временной шкалой карт</p>
 					<div className="mb-2 btn-group">
 						<button
 							className="btn gsap-btn"
 							onClick={() =>  this.tl.play()}
-						>Play</button>
+						>Играть</button>
 						<button
 							className="btn gsap-btn"
 							onClick={() => this.tl.pause()}
-						>Pause</button>
+						>Пауза</button>
 						<button
 							className="btn gsap-btn"
 							onClick={() => this.tl.reverse()}
-						>Reverse</button>
+						>Реверс</button>
 						<button
 							className="btn gsap-btn"
 							onClick={() => this.tl.restart()}
-						>Restart</button>
+						>Рестарт</button>
 					</div>
 					<hr/>
 				</div>
