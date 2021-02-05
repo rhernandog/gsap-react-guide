@@ -1,5 +1,5 @@
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	// установить обратный вызов JSONP для загрузки чанка
+/******/ 	// install a JSONP callback for chunk loading
 /******/ 	function webpackJsonpCallback(data) {
 /******/ 		var chunkIds = data[0];
 /******/ 		var moreModules = data[1];
@@ -487,4 +487,4 @@ if(false) {}
 /***/ })
 
 /******/ });
-//# sourceMappingURL=app-fccec70e462d1cfa9c19.js.map
+//# sourceMappingURL=app-7d9d7efabff63fab6477.js.map
